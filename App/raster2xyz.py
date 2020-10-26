@@ -9,7 +9,7 @@ class Raster2xyz(object):
     def __geotrCoords(self, gtr, x, y):
       try:
         gtr_x = x
-        gtr_y = - y
+        gtr_y = y
 
         return(gtr_x, gtr_y)
 
