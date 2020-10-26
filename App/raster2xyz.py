@@ -1,21 +1,15 @@
+import numpy as np
+import pandas as pd
+
 class Raster2xyz(object):
 
     def __init__(self, verbose=True):
       pass
 
     def __geotrCoords(self, gtr, x, y):
-      #(167938.0000000021, 1.0, 0.0, 147400.99999999837, 0.0, -1.0)
-      #[  0   1   2 ... 124 125 126]
-      #[  0   0   0 ... 118 118 118]
-      print(x)
-      print(y)
-      print(gtr)
       try:
-        gtr_x = gtr[0] + (x) * gtr[1] + (y) * gtr[2]
-        gtr_y = gtr[3] + (x) * gtr[4] + (y) * gtr[5]
-
-        #gtr_x = x
-        #gtr_y = 
+        gtr_x = x
+        gtr_y = - y
 
         return(gtr_x, gtr_y)
 
@@ -60,7 +54,7 @@ class Raster2xyz(object):
       x, y, data_vals = self.__getXyzData(raster, no_data)
       gtr_x, gtr_y = self.__geotrCoords(meta, x, y)
 
-      return self.__buildXyzData(gtr_x, gtr_y, data_vals)
+      return self.__buildXyzData(gtr_x, gtr_y, data_vals), (meta[0], meta[3])
 
 
 raster2xyz = Raster2xyz()

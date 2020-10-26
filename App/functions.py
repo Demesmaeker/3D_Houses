@@ -1,3 +1,6 @@
+import numpy as np
+import rasterio as rio
+
 def set_path_dsm(province):
     wal_dsm = f"/home/demes/Documents/Ressources/Wallonia/DSM 2013-2014/RELIEF_WALLONIE_MNS_2013_2014_GEOTIFF_31370_PROV_{province}/RELIEF_WALLONIE_MNS_2013_2014.tif"
     return wal_dsm
