@@ -6,7 +6,7 @@ Starting with only an address, get a basic 3D of the house.
 
 ## Map
 
-![Map](https://github.com/Demesmaeker/3D_Houses/blob/master/Schemas/Plan.svg)
+![Map](https://github.com/Demesmaeker/3D_Houses/blob/main/Schemas/Plan.svg)
 
 
 ### Who
